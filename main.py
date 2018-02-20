@@ -1,4 +1,13 @@
 #!/usr/bin/env python
+# nasacct/monitor-ip
+# containerized app to register in a log IP changes from routers.
+# implemented as a dynamic IP service this app will record IPs set with
+#    http://server:port/update/<ip>
+# and will return the last logged IP with:
+#    http://server:port/ip
+#
+# programmed by n4s (@github)
+
 from flask import *
 import os
 import datetime
