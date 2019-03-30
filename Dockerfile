@@ -1,7 +1,7 @@
 # docker file to create container with python, flask, uWSGI and nginx
 FROM alpine:latest
 MAINTAINER nasacct
-COPY repositories /etc/apk
+#COPY repositories /etc/apk
 RUN apk update && \
     apk add bash python py-pip uwsgi uwsgi-python nginx ca-certificates supervisor && \
     pip install flask flask-session
